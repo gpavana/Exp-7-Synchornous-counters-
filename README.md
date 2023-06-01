@@ -100,7 +100,7 @@ endmodule
 ### UP COUNTER:
 ![Exp-6-Synchornous-counters - up counter and down counter](upc.jpg)
 ### DOWN COUNTER:
-![Exp-6-Synchornous-counters - up counter and down counter](down.jpg)
+![Exp-6-Synchornous-counters - up counter and down counter](downc.jpg)
 
 ### RESULTS:
 Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified. 
