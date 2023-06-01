@@ -1,7 +1,13 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM: 
+To implement 4 bit up and down counters and validate  functionality.
+
+### HARDWARE REQUIRED: 
+ – PC, Cyclone II , USB flasher
+
+### SOFTWARE REQUIRED: 
+  Quartus prime
+
 ### THEORY 
 
 ## UP COUNTER 
@@ -19,17 +25,10 @@ Binary count sequence, paying attention to patterns preceding the “toggling”
 
 Note that each bit in this four-bit sequence toggles when the bit before it (the bit having a lesser significance, or place-weight), toggles in a particular direction: from 1 to 0.
 
-
-
- 
- 
-
 Starting with four J-K flip-flops connected in such a way to always be in the “toggle” mode, we need to determine how to connect the clock inputs in such a way so that each succeeding bit toggles when the bit before it transitions from 1 to 0.
 
 The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:
 
- 
- 
 
 Four-bit “Up” Counter
 ![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
@@ -43,46 +42,65 @@ As well as counting “up” from zero and increasing or incrementing to some pr
 This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 4-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
-
 4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
 
+### Procedure
+1.Create a new project in Quartus|| Software.
+2.Name the project as upc and downc for up and down counter.
+3.Create a new verilog hdl file in the project file.
+4.Within that file write the program for up and down counter
+5.After that run the program and give the clock pulse value   as 50 in timing diagram and run the program.
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: G.PAVANA
+RegisterNumber: 212222230105
+```
+### UPCOUNTER:
+```
+module upc(clk,A);
+input clk;
+output reg[0:3]A;
+always@(posedge clk)
+begin
+		A[0]=((((A[1])&(A[2]))&A[3])^A[0]);
+		A[1]=(((A[2])&(A[3]))^A[1]);
+		A[2]=((A[3])^A[2]);
+		A[3]=1^A[3];
+end
+endmodule
+```
+### DOWNCOUNTER:
+```
+module downc(clk,A);
+input clk;
+output reg[0:3]A;
+always@(posedge clk)
+begin
+	A[0]=((((~A[1])&(~A[2]))&A[3])^A[0]);
+	A[1]=(((A[2])&(A[3]))^A[1]);
+	A[2]=((A[3])^A[2]);
+	A[3]=1^A[3];
+end
+endmodule
+```
+### RTL LOGIC :
+### UP COUNTER:
+![Exp-6-Synchornous-counters - up counter and down counter](upc4(2).png)
+### DOWN COUNTER:  
+![Exp-6-Synchornous-counters - up counter and down counter](downc4(1).png)
+### TIMING DIGRAMS FOR COUNTER  :
+### UP COUNTER:
+![Exp-6-Synchornous-counters - up counter and down counter](upc4(1).png)
+### DOWN COUNTER:
+![Exp-6-Synchornous-counters - up counter and down counter](downc4(2).png)
+### TRUTH TABLE :
+### UP COUNTER:
+![Exp-6-Synchornous-counters - up counter and down counter](upc.jpg)
+### DOWN COUNTER:
+![Exp-6-Synchornous-counters - up counter and down counter](down.jpg)
 
-
-
-
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
+### RESULTS:
+Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified. 
