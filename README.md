@@ -95,7 +95,7 @@ endmodule
 ### UP COUNTER:
 ![Exp-6-Synchornous-counters - up counter and down counter](upc4(1).png)
 ### DOWN COUNTER:
-![Exp-6-Synchornous-counters - up counter and down counter](downcounter1.png)
+![Exp-6-Synchornous-counters - up counter and down counter](downcounter 1.png)
 ### TRUTH TABLE :
 ### UP COUNTER:
 ![Exp-6-Synchornous-counters - up counter and down counter](upc.jpg)
