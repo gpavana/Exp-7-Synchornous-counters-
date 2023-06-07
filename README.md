@@ -90,12 +90,12 @@ endmodule
 ### UP COUNTER:
 ![Exp-6-Synchornous-counters - up counter and down counter](upc4(2).png)
 ### DOWN COUNTER:  
-![Exp-6-Synchornous-counters - up counter and down counter](downc4(1).png)
+![Exp-6-Synchornous-counters - up counter and down counter](downcounter.png)
 ### TIMING DIGRAMS FOR COUNTER  :
 ### UP COUNTER:
 ![Exp-6-Synchornous-counters - up counter and down counter](upc4(1).png)
 ### DOWN COUNTER:
-![Exp-6-Synchornous-counters - up counter and down counter](downc4(2).png)
+![Exp-6-Synchornous-counters - up counter and down counter](downcounter1.png)
 ### TRUTH TABLE :
 ### UP COUNTER:
 ![Exp-6-Synchornous-counters - up counter and down counter](upc.jpg)
